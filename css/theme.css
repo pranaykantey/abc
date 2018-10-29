@@ -1,6 +1,7 @@
 /* Global style */
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #ecf0f1;
 }
 img {
     width: 100%;
@@ -9,6 +10,9 @@ img {
 .container {
     max-width: 960px;
     margin: auto;
+    overflow: hidden;
+}
+.container-fluid {
     overflow: hidden;
 }
 .overflow {
@@ -20,6 +24,10 @@ h1,h2,h3,h4,h5,h6 {
 ul li a {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+}
+/* custom utility class */
+.border-4 {
+    border-width:4px !important;
 }
 /* header style */
 header .navbar {
@@ -53,4 +61,64 @@ header .navbar {
 }
 #smallCarousel ol li.active {
     background-color: #2ecc71;
+}
+
+/* slogan styles */
+.slogan-content {
+    overflow: hidden;
+}
+
+/* fixed sidebar style */
+.fixed {
+    position: fixed;
+}
+.fixed-left {
+	left: 0;
+	top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.fixed-right {
+    right: 0;
+	top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* footer area style */
+.footer {
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+
+/* Responsive styles */
+@media all and (max-width: 960px){
+    .fixed {
+        position: absolute;
+    }
+    .fixed-left {
+        left: 0;
+        top: 40px;
+        transform: translateY(0);
+    }
+    .fixed-right {
+        right: 0;
+        top: 40px;
+        transform: translateY(0);
+    }
+}
+@media all and (max-width: 765px){
+    .fixed {
+        position: static;
+    }
+    .fixed-left {
+        left: 0;
+        top: 0;
+    }
+    .fixed-right {
+        right: 0;
+        top: 0;
+    }
 }
